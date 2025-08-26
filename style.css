@@ -1,0 +1,1035 @@
+/* ====================== */
+/* === GLOBAL STYLES === */
+/* ====================== */
+
+/* Smooth scrolling for whole document */
+html {
+    scroll-behavior: smooth;
+}
+
+/* Reset default styles and set base font */
+* {
+    margin: 0;
+    padding: 0;
+    font-family: 'Poppins', sans-serif;
+    box-sizing: border-box;
+}
+
+/* Body background and text color */
+body {
+    background: #080808;
+    color: #fff;
+}
+
+/* Container for centered content with max-width */
+.container {
+    padding: 10px 10%;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+/* Flexible row layout */
+.row {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    gap: 20px;
+}
+
+/* ====================== */
+/* === HEADER SECTION === */
+/* ====================== */
+
+#header {
+    width: 100%;
+    height: 100vh;
+    background-image: url(images/background.png);
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    position: relative;
+}
+
+/* Navigation bar styles */
+nav {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+
+.logo {
+    width: 140px;
+}
+
+nav ul li {
+    display: inline-block;
+    list-style: none;
+    margin: 10px 20px;
+}
+
+nav ul li a {
+    color: #fff;
+    text-decoration: none;
+    font-size: 18px;
+    position: relative;
+}
+
+/* Navigation hover effect */
+nav ul li::after {
+    content: '';
+    width: 0;
+    height: 3px;
+    background: #ff004f;
+    position: absolute;
+    left: 0;
+    bottom: -6px;
+    transition: 0.5s;
+}
+
+nav ul li:hover::after {
+    width: 100%;
+}
+
+/* Header text content */
+.header-text {
+    margin-top: 15%;
+    font-size: 30px;
+    position: relative;
+    z-index: 1;
+    padding-left: 20px;
+    line-height: 1.4;
+    text-align: left;
+}
+
+.subtitle {
+    letter-spacing: 3px;
+    font-size: 0.9rem;
+    color: #ababab;
+    margin-bottom: 5px;
+}
+
+.greeting {
+    font-weight: 300;
+    font-size: 1.8rem;
+    color: #fff !important;
+    margin-right: 8px;
+    opacity: 0.9;
+}
+
+/* Name with gradient effect */
+.name-gradient {
+    background: linear-gradient(135deg, #ff004f 0%, #ff8a00 100%);
+    -webkit-background-clip: text;
+    background-clip: text;
+    color: transparent;
+    font-weight: 700;
+}
+
+/* Tagline bubble styling */
+.tagline-bubble {
+    font-size: 1rem;
+    background: rgba(255,0,79,0.15);
+    padding: 8px 15px;
+    border-radius: 50px;
+    font-style: italic;
+    display: inline-block;
+    transform: translateY(-5px);
+}
+
+.sparkle-divider {
+    color: #ff004f;
+    letter-spacing: 8px;
+    margin: 15px 0;
+    font-size: 1rem;
+}
+
+/* Role and location styling */
+.aspiring-role {
+    font-size: 1.1rem;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.location-pill {
+    background: #262626;
+    padding: 4px 12px;
+    border-radius: 50px;
+    font-size: 0.9rem;
+    display: inline-flex;
+    align-items: center;
+}
+
+/* ===================== */
+/* === ABOUT SECTION === */
+/* ===================== */
+
+#about {
+    padding: 80px 0;
+    color: #ababab;
+}
+
+/* Profile image column */
+.about-col-1 {
+    flex-basis: 35%;
+}
+
+.about-col-1 img {
+    width: 100%;
+    max-width: 350px;
+    border-radius: 15px;
+    margin: 0 auto;
+    display: block;
+}
+
+/* Content column */
+.about-col-2 {
+    flex-basis: 60%;
+}
+
+.sub-title {
+    font-size: 60px;
+    font-weight: 600;
+    color: #fff;
+}
+
+/* About content card */
+.about-content {
+    background: rgba(39, 39, 39, 0.5);
+    padding: 25px;
+    border-radius: 10px;
+    border-left: 4px solid #ff004f;
+    margin-bottom: 30px;
+}
+
+.intro-line {
+    color: #ff8a00;
+    font-weight: 600;
+    margin-bottom: 15px;
+}
+
+/* Experience list with custom bullets */
+.experience-list {
+    list-style-type: none;
+    padding-left: 0;
+    margin: 15px 0 20px;
+}
+
+.experience-list li {
+    position: relative;
+    margin-bottom: 10px; /* Space between items */
+    padding-left: 25px;
+    line-height: 1.2; /* Tight line spacing */
+}
+
+.experience-list li:before {
+    content: "•";
+    color: #ff004f;
+    font-size: 20px;
+    position: absolute;
+    left: 5px;
+    top: 0px;
+}
+/* If you have separate paragraphs for descriptions, add this */
+.experience-list li p {
+    margin-top: 2px; /* Reduced from default */
+    margin-bottom: 5px;
+}
+
+.project-highlight {
+    font-style: italic;
+    color: #ababab;
+    margin-top: 15px;
+}
+
+
+/* Make the description text appear right after the title */
+.exp-title + * {
+    display: inline; /* Make description inline */
+    margin-left: 5px; /* Small space between title and description */
+}
+
+/* Tab system styling */
+.tab-titles {
+    display: flex;
+    margin: 20px 0 30px;
+}
+
+.tab-links {
+    margin-right: 50px;
+    font-size: 18px;
+    color: #ababab;
+    font-weight: 500;
+    cursor: pointer;
+    position: relative;
+}
+
+.tab-links.active-link {
+    color: #fff;
+}
+
+.tab-links::after {
+    content: '';
+    width: 0;
+    height: 3px;
+    background: #ff004f;
+    position: absolute;
+    left: 0;
+    bottom: -8px;
+    transition: 0.5s;
+}
+
+.tab-links.active-link::after {
+    width: 50%;
+}
+
+.tab-contents {
+    display: none;
+    padding: 5px 0;
+}
+
+.tab-contents.active-tab {
+    display: block;
+    padding-top: 0; /* Remove default padding */
+    margin-top: -5px; /* Pull content up closer to tabs */
+}
+
+/* ====================== */
+/* === SKILLS SECTION === */
+/* ====================== */
+
+.skills-section {
+    margin-top: 15px;
+}
+/* Fix for Skills section spacing */
+#skills .skills-group {
+    display: flex;
+    flex-direction: column;
+    gap: 12px; /* Reduced from 20px */
+}
+#skills .skill-category {
+    margin-bottom: 4px; /* Reduced spacing */
+}
+
+#skills .skill-items {
+    margin-top: 4px; /* Reduced from 10px */
+    margin-left: 15px;
+}
+.skills-heading {
+    color: #00ced1 !important; /* Orange color for headings */
+    font-size: 22px;
+    position: relative;
+    display: inline-block;
+    margin-bottom: 5px; /* Change this value */
+    margin-top: 0; /* Remove default margin */
+    padding-top: 0; /* Remove default padding */
+}
+
+.skills-heading:after {
+    content: "";
+    position: absolute;
+    bottom: -5px;
+    left: 0;
+    width: 50%;
+    height: 2px;
+    background: #ff004f;
+}
+.soft-skills {
+    margin-top: 15px; /* Change this value */
+}
+
+.skills-heading.soft-skills {
+    color: #00ced1;
+}
+
+.skills-heading.soft-skills:after {
+    background: #ff004f;
+}
+
+.skills-group {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 15px;
+}
+
+.skill-category {
+    font-weight: 500;
+    color: #ff8a00;
+    margin-bottom: 2px;
+}
+
+.skill-items {
+    color: #ababab; /* Light gray for items */
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+    margin-top: 3px;
+    margin-left: 15px;
+}
+
+.skill-items span {
+    background: rgba(255, 0, 79, 0.1);
+    padding: 5px 12px;
+    border-radius: 4px;
+}
+
+.skill-items.soft {
+    margin-left: 0; /* Remove indentation for soft skills */
+    gap: 5px; /* Slightly more space between soft skills */
+    color: #ababab !important;
+    margin-top: 3px; /* Change this value */
+    letter-spacing: 0.3px; /* Makes separators tighter */
+}
+/* Soft skills specific fix */
+#skills .soft-skills {
+    margin-top: 20px; /* Clear separation */
+}
+
+#skills .skill-items.soft {
+    margin-left: 0;
+    gap: 10px;
+}
+/* Add this new rule */
+#skills .skills-group > div {
+    margin-bottom: 8px; /* Space between skill categories */
+}
+/* ========================= */
+/* === EXPERIENCE SECTION === */
+/* ========================= */
+
+.exp-title {
+    color: #ff8a00;
+    font-weight: 500;
+    display: inline-block; /* Changed from block to inline-block */
+    margin-bottom: 0; /* Remove all bottom margin */
+    padding-bottom: 0; /* Remove any padding */
+}
+
+/* ======================== */
+/* === EDUCATION SECTION === */
+/* ======================== */
+
+.edu-period {
+    color: #ff004f;
+    font-weight: 500;
+}
+
+.edu-degree {
+    font-weight: 500;
+}
+
+/* ======================== */
+/* === SERVICES SECTION === */
+/* ======================== */
+.hidden-service {
+    display: none;
+}
+#services {
+    padding: 80px 0;
+    background: #0f0f0f;
+}
+
+#services .sub-title {
+    text-align: center;
+    margin-bottom: 50px;
+    position: relative;
+}
+
+#services .sub-title::after {
+    content: '';
+    position: absolute;
+    bottom: -15px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 80px;
+    height: 3px;
+    background: #ff004f;
+}
+
+.services-list {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 30px;
+    margin: 0 auto;
+    max-width: 1200px;
+    padding: 0 20px;
+}
+
+.service-card {
+    background: #1a1a1a;
+    border-radius: 15px;
+    padding: 30px;
+    transition: all 0.3s ease;
+    border-left: 3px solid #ff004f;
+    text-align: left;
+}
+
+.service-card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 15px 30px rgba(255, 0, 79, 0.1);
+}
+
+.service-card i {
+    font-size: 40px;
+    color: #ff004f;
+    margin-bottom: 20px;
+    display: inline-block;
+}
+
+.service-card h2 {
+    font-size: 22px;
+    font-weight: 600;
+    margin-bottom: 15px;
+    color: #fff;
+}
+
+.service-card p {
+    color: #ababab;
+    font-size: 15px;
+    line-height: 1.6;
+    margin-bottom: 20px;
+}
+
+.service-link {
+    display: inline-block;
+    color: #ff004f;
+    font-weight: 500;
+    text-decoration: none;
+    position: relative;
+    padding-bottom: 3px;
+    transition: all 0.3s ease;
+}
+
+.service-link::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 0;
+    height: 2px;
+    background: #ff004f;
+    transition: width 0.3s ease;
+}
+
+.service-link:hover {
+    color: #ff8a00;
+}
+
+.service-link:hover::after {
+    width: 100%;
+}
+
+.service-details {
+    margin-top: 20px;
+    padding-top: 20px;
+    border-top: 1px solid rgba(255, 0, 79, 0.2);
+    animation: fadeIn 0.4s ease;
+}
+
+.detail-section {
+    margin-bottom: 15px;
+}
+
+.detail-section h4 {
+    color: #ff8a00;
+    font-size: 16px;
+    margin-bottom: 8px;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+
+.detail-section h4::before {
+    content: '▹';
+    color: #ff004f;
+    font-size: 14px;
+}
+
+.detail-section p {
+    margin-left: 20px;
+    font-size: 14px;
+    line-height: 1.7;
+    color: #d1d1d1;
+}
+.see-more-btn {
+    display: block;
+    margin: 40px auto 0;
+    background: transparent;
+    border: 1px solid #ff004f;
+    color: #ff004f;
+    transition: all 0.3s ease;
+}
+
+.see-more-btn:hover {
+    background: #ff004f;
+    color: white;
+}
+/* ======================= */
+/* === PORTFOLIO SECTION === */
+/* ======================= */
+#portfolio {
+    padding: 80px 0;
+    background: #0f0f0f;
+}
+
+.work-list {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 30px;
+    margin-top: 50px;
+}
+
+.work {
+    background: #1a1a1a;
+    border-radius: 15px;
+    overflow: hidden;
+    position: relative;
+    transition: all 0.3s ease;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+}
+
+.work img {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+    transition: transform 0.5s;
+}
+
+.layer {
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(rgba(0,0,0,0.7), #ff004f);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+    text-align: center;
+    opacity: 0;
+    transition: opacity 0.5s;
+}
+
+.layer h3 {
+    font-weight: 600;
+    margin-bottom: 10px;
+    color: #fff;
+}
+
+.layer p {
+    color: #ddd;
+    font-size: 14px;
+    margin-bottom: 20px;
+}
+
+.tech-stack {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 8px;
+    margin-bottom: 15px;
+}
+
+.tech-icon {
+    background: rgba(255,255,255,0.1);
+    padding: 5px 10px;
+    border-radius: 20px;
+    font-size: 12px;
+    color: #fff;
+}
+
+.project-link {
+    color: #fff;
+    background: rgba(255,0,79,0.8);
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: all 0.3s;
+}
+
+.project-link:hover {
+    background: #ff004f;
+    transform: scale(1.1);
+}
+
+.project-details {
+    padding: 20px;
+    background: #262626;
+    font-size: 14px;
+    line-height: 1.6;
+    color: #d1d1d1;
+}
+
+.work:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 15px 30px rgba(255,0,79,0.1);
+}
+
+.work:hover img {
+    transform: scale(1.05);
+}
+
+.work:hover .layer {
+    opacity: 1;
+}
+
+.btn {
+    display: block;
+
+    margin: 50px auto;
+    width: fit-content;
+    border: 1px solid #ff004f;
+    padding: 14px 50px;
+    border-radius: 6px;
+    text-decoration: none;
+    color: #fff;
+    transition: background 0.5s;
+}
+
+.btn:hover {
+    background: #ff004f;
+}
+
+/* ======================== */
+/* === CONTACT SECTION === */
+/* ======================== */
+
+.contact-left {
+    flex-basis: 35%;
+}
+
+.contact-right {
+    flex-basis: 60%;
+}
+
+.contact-left p {
+    margin-top: 30px;
+}
+
+.contact-left p i {
+    color: #ff004f;
+    margin-right: 15px;
+    font-size: 25px;
+}
+
+.social-icons {
+    margin-top: 30px;
+}
+
+.social-icons a {
+    text-decoration: none;
+    font-size: 30px;
+    margin-right: 15px;
+    color: #ababab;
+    display: inline-block;
+    transition: transform 0.5s;
+}
+
+.social-icons a:hover {
+    color: #ff004f;
+    transform: translateY(-5px);
+}
+
+.btn.btn2 {
+    display: inline-block;
+    background: #ff004f;
+}
+
+.contact-right form {
+    width: 100%;
+}
+
+form input,
+form textarea {
+    width: 100%;
+    border: 0;
+    outline: none;
+    background: #262626;
+    padding: 15px;
+    margin: 15px 0;
+    color: #fff;
+    font-size: 18px;
+    border-radius: 6px;
+}
+
+form .btn2 {
+    padding: 14px 60px;
+    font-size: 18px;
+    margin-top: 20px;
+    cursor: pointer;
+}
+
+.copyright {
+    width: 100%;
+    text-align: center;
+    padding: 25px 0;
+    background: #262626;
+    font-weight: 300;
+    margin-top: 20px;
+}
+
+.copyright i {
+    color: #ff004f;
+}
+
+#msg {
+    color: #61b752;
+    margin-top: -40px;
+    display: block;
+}
+
+/* =========================== */
+/* === MOBILE RESPONSIVENESS === */
+/* =========================== */
+
+/*----------------css for small\mobile screen----------------*/
+nav .fa-solid{
+    display: none;
+}
+
+@media only screen and (max-width: 600px){
+    .about-col-1, .about-col-2 {
+        flex-basis: 100%; /* Stack columns on mobile */
+    }
+    .about-col-1 {
+        margin-bottom: 30px;
+    }
+    .about-col-2{
+        font-size: 14px;
+    }
+
+    #header{
+        background-image: url(images/phone-background.png);
+        background-attachment: fixed;
+    }
+    .header-text{
+        text-align: left; /* Force left alignment */
+        padding-left: 20px; /* Add breathing space */
+        margin-right: 20px; /* Prevent edge crowding */
+        padding: 0 15px;
+    }
+    .subtitle {
+        font-size: 0.8rem;
+        margin-bottom: 5px;
+    }
+    h1 {
+        font-size: 1.8rem;
+        flex-direction: column;
+        gap: 0px !important; /* Tight spacing */
+        line-height: 1.4;
+        justify-content: flex-start !important; 
+    }
+    .greeting {
+        font-size: 1.4rem;
+        color: #fff;
+        margin-bottom: 5px;
+        text-align: left;
+        margin-left: 0;
+        align-self: flex-start !important;
+    }
+    .name-gradient {
+        font-size: 2rem;
+        margin-bottom: 8px;
+        text-align: left;
+        margin-left: 0;
+        align-self: flex-start !important;
+    }
+    .tagline-bubble {
+        position: relative;
+        padding-left: 0.95px;
+        font-style: italic;
+        display: inline-block;
+        margin: 10px 0;
+        color: #e0e0e0 !important; /* Soft white */
+        font-size: 1rem !important; /* Your preferred size */
+        line-height: 1.4; /* Better spacing */
+    }
+    .tagline-bubble::before {
+        content: "";
+        position: absolute;
+        left: 0;
+        top: 50%;
+        transform: translateY(-50%);
+        height: 70%;
+        width: 2px;
+        background: #ff004f;
+        border-radius: 1px;
+}
+
+    .sparkle-divider {
+        font-size: 0.9rem;
+        margin: 10px 0;
+        letter-spacing: 5px;
+        margin-left: 0;
+        justify-content: flex-start;
+    }
+
+    .aspiring-role {
+        flex-direction: column; /* Stack icon/text */
+        align-items: flex-start;
+        gap: 3px;
+        font-size: 0.95rem;
+        text-align: left;
+        margin-left: 0;
+        align-self: flex-start !important;
+    }
+    .aspiring-role i {
+        font-size: 1rem;
+    }
+    .location-pill {
+        font-size: 0.8rem;
+        padding: 3px 10px;
+        margin-top: 5px;
+    }
+    /* Visual Hierarchy Fix */
+    .header-text > * {
+        margin-bottom: 8px;
+    }
+
+    .header-text h1{
+        font-size: 32px;
+        line-height: 1.3;
+    }
+    .name-break {
+        display: block; /* This will force "Taimoor" to a new line */
+        margin-left: 5px;
+    }
+    
+    .header-text p{
+        font-size: 14px; /* Added for mobile */
+    }
+    nav .fa-solid{
+    display: block;
+    font-size: 25px;
+    }
+    nav ul{
+        background: #ff004f;
+        position: fixed;
+        top: 0;
+        right: -200px;
+        width: 200px;
+        height: 100vh;
+        padding-top: 50px;
+        z-index: 2;
+        transition: right 0.5s;
+    }
+    nav ul li{
+        display: block;
+        margin: 25px;
+    }
+    nav ul .fa-solid{
+        position: absolute;
+        top: 25px;
+        left: 25px;
+        cursor: pointer;
+    }
+    .logo {
+        width: 100px; /* Smaller logo on mobile */
+    }
+    .sub-title{
+        font-size: 40px;
+    }
+    .tab-links{
+        font-size: 16px;
+        margin: 20px;
+    }
+    .contact-left, .contact-right{
+        flex-basis: 100%;
+    }
+    .copyright{
+        font-size: 14px;
+    }
+        /* Portfolio section adjustments */
+    .work-list {
+        grid-template-columns: 1fr;
+        gap: 30px;
+        margin: 30px 0;
+    }
+    .work {
+        width: 100%;
+        max-width: 400px;
+        margin: 0 auto; /* Center the portfolio items */
+    }
+
+    .work img {
+        height: 250px; /* Optimal mobile height */
+        width: 100%;
+        object-fit: cover;
+    }
+
+    /* Keep original text formatting */
+    .layer {
+        padding: 0 20px;
+        text-align: left; /* Original left alignment */
+    }
+
+    .layer h3 {
+        font-size: 20px;
+        margin-bottom: 10px;
+        font-weight: 500;
+    }
+
+    .layer p {
+        font-size: 14px;
+        line-height: 1.4;
+        margin-bottom: 15px;
+    }
+
+        /* Services section adjustments */
+    .services-list {
+        grid-template-columns: 1fr; /* Single column on mobile */
+        margin: 30px; /* Reduced margin */
+        gap: 30px;
+        padding: 0 15px;
+    }
+    .service-card {
+        padding: 25px;
+    }
+    
+    .service-card i {
+        font-size: 35px;
+    }
+    
+    .service-card h2 {
+        font-size: 20px;
+    }
+    .services-list div {
+        padding: 30px; /* Adjusted padding */
+        min-height: 300px; /* Fixed height */
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        margin: 0 auto; /* Center the service boxes */
+    }
+    
+    .services-list div i {
+        font-size: 50px; /* Slightly smaller icons */
+        margin-bottom: 25px;
+    }
+    
+    .services-list div h2 {
+        font-size: 28px; /* Smaller heading */
+        margin-bottom: 20px;
+    }
+    .services-list div p {
+        font-size: 16px; /* Readable text */
+        margin-bottom: 20px;
+        flex-grow: 1;
+    }
+    
+    .services-list div a {
+        font-size: 16px;
+        padding: 10px 20px;
+    }
+#msg{
+    color: #61b752;
+    margin-top: -40px;
+    display: block;
+}
+}

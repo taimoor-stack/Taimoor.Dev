@@ -1,0 +1,608 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <!-- ==================== -->
+    <!-- === META TAGS === -->
+    <!-- ==================== -->
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE-edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Taimoor's Portfolio - Software Engineering Student and Developer">
+    <title>Personal Portfolio Website</title>
+    
+    <!-- ==================== -->
+    <!-- === CSS & FONTS === -->
+    <!-- ==================== -->
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+
+<body>
+    <!-- ==================== -->
+    <!-- === HEADER SECTION === -->
+    <!-- ==================== -->
+    <header id="header">
+        <div class="container">
+            <!-- Navigation Bar -->
+            <nav>
+                <img src="images/logo.png" class="logo" alt="Portfolio Logo">
+                
+                <!-- Desktop Navigation -->
+                <ul id="sidemenu">
+                    <li><a href="#header">Home</a></li>
+                    <li><a href="#about">About</a></li>
+                    <li><a href="#services">Services</a></li>
+                    <li><a href="#portfolio">Portfolio</a></li>
+                    <li><a href="#contact">Contact</a></li>
+                    <i class="fa-solid fa-xmark" onclick="closemenu()"></i>
+                </ul>
+                
+                <!-- Mobile Menu Toggle -->
+                <i class="fa-solid fa-bars" onclick="openmenu()"></i>
+            </nav>
+            
+            <!-- Hero Content -->
+            <div class="header-text">
+                <p class="subtitle">SOFTWARE ENGINEER</p>
+                <h1>
+                    <span class="greeting">Hi, Myself</span>
+                    <span class="name-gradient">Taimoor</span>
+                    <span class="tagline-bubble">"Turning ideas into scalable code"</span>
+                </h1>
+                <div class="sparkle-divider">✦✦✦</div>
+                <p class="aspiring-role">
+                    <i class="fas fa-rocket"></i> Aspiring DevOps Engineer 
+                    <span class="location-pill">Pakistan</span>
+                </p>
+            </div>
+        </div>
+    </header>
+
+    <!-- ==================== -->
+    <!-- === ABOUT SECTION === -->
+    <!-- ==================== -->
+    <section id="about">
+        <div class="container">
+            <div class="row">
+                <!-- Profile Image Column -->
+                <div class="about-col-1">
+                    <img src="images/user.png" alt="Taimoor's Profile Picture" loading="lazy">
+                </div>
+                
+                <!-- Content Column -->
+                <div class="about-col-2">
+                    <h1 class="sub-title">About Me</h1>
+                    
+                    <!-- Introduction -->
+                    <div class="about-content">
+                        <p class="intro-line">Software Engineering Student | Java/Python Developer | AI & Full-Stack Enthusiast</p>
+                        <p>Passionate 4th-semester BSc Software Engineering student at COMSATS University with hands-on experience in:</p>
+                        
+                        <!-- Experience List -->
+                        <ul class="experience-list">
+                            <li><span>Java/Python programming</span></li>
+                            <li><span>Database systems (MySQL)</span></li>
+                            <li><span>Web development (React.js)</span></li>
+                            <li><span>AI fundamentals (Prolog, search algorithms)</span></li>
+                        </ul>
+                        
+                        <p class="project-highlight">Currently building academic projects like an AI maze solver and multi-platform Airline Reservation System to sharpen my problem-solving skills. Seeking internships to apply my knowledge in real-world development.</p>
+                    </div>
+
+                    <!-- Tab Navigation -->
+                    <div class="tab-titles">
+                        <p class="tab-links active-link" onclick="opentab('skills')">Skills</p>
+                        <p class="tab-links" onclick="opentab('experience')">Experience</p>
+                        <p class="tab-links" onclick="opentab('education')">Education</p>
+                    </div>
+
+                    <!-- Tab Content -->
+                    <!-- SKills Tab -->
+                    <div class="tab-contents active-tab" id="skills">
+                        <div class="skills-section">
+                            <h3 class="skills-heading">Technical Skills</h3>
+                            <div class="skills-group">
+                                <div>
+                                    <p class="skill-category">Languages:</p>
+                                    <p class="skill-items">Java, Python, C++, SQL</p>
+                                </div>
+                                <div>
+                                    <p class="skill-category">Web Development:</p>
+                                    <p class="skill-items">React.js, HTML/CSS, JavaScript</p>
+                                </div>
+                                <div>
+                                    <p class="skill-category">Database:</p>
+                                    <p class="skill-items">MySQL, Oracle</p>
+                                </div>
+                                <div>
+                                    <p class="skill-category">AI/ML:</p>
+                                    <p class="skill-items">Prolog, Search Algorithms</p>
+                                </div>
+                                <div>
+                                    <p class="skill-category">Tools:</p>
+                                    <p class="skill-items">Git, VS Code, Figma (Basic)</p>
+                                </div>
+                            </div>
+                            <h3 class="skills-heading soft-skills">Soft Skills</h3>
+                            <p class="skill-items soft">Problem-Solving | Team Collaboration | Analytical Thinking</p>
+                        </div>
+                    </div>
+                    
+                    <!-- Experience Tab -->
+                    <div class="tab-contents" id="experience">
+                        <ul class="experience-list">
+                            <li>
+                                <span class="exp-title">AI Maze Solver</span><br>
+                                Implemented search algorithms (Local/Defined/Undefined) in Prolog
+                            </li>
+                            <li>
+                                <span class="exp-title">Airline Reservation System</span><br>
+                                Developed 5 versions (Java GUI, C++/DSA, Python, MySQL)
+                            </li>
+                            <li>
+                                <span class="exp-title">InfoSec Toolkit</span><br>
+                                Elgamal encryption & digital signatures
+                            </li>
+                            <li>
+                                <span class="exp-title">Fiverr freelancing</span><br>
+                                Developed custom Java/Python scripts and GUI tools for international clients
+                            </li>
+                        </ul>
+                    </div>
+                    
+                    <!-- Education Tab -->
+                    <div class="tab-contents" id="education">
+                        <ul class="education-list">
+                            <li>
+                                <span class="edu-period">2023-2027</span><br>
+                                <span class="edu-degree">BSc Software Engineering</span><br>
+                                COMSATS University Islamabad (Attock Campus)
+                            </li>
+                            <li>
+                                <span class="edu-period">2021-2023</span><br>
+                                <span class="edu-degree">ICS (with Physics)</span><br>
+                                Sir Syed School & College Wah Cantt (Campus 2)
+                            </li>
+                            <li>
+                                <span class="edu-period">2019-2021</span><br>
+                                <span class="edu-degree">Matric</span><br>
+                                Sir Syed School Sanjwal Cantt (Campus 2)
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ====================== -->
+    <!-- === SERVICES SECTION === -->
+    <!-- ====================== -->
+    <section id="services">
+        <div class="container">
+            <h1 class="sub-title">My Services</h1>
+            <div class="services-list">
+                <!-- Service Card 1 -->
+                <div class="service-card">
+    <i class="fa-solid fa-code"></i>
+    <h2>Web Development</h2>
+    <p>Custom website development with modern technologies.</p>
+    <a href="#contact" class="service-link learn-more-btn" data-service="Web Development">Learn more</a>
+    
+    <div class="service-details" style="display: none;">
+        <div class="detail-section">
+            <h4>📌 Technologies I Use:</h4>
+            <p>Frontend: React.js, HTML5/CSS3, JavaScript</p>
+            <p>Backend: Node.js, Java Spring Boot (learning)</p>
+            <p>Databases: MySQL, MongoDB basics</p>
+        </div>
+        <div class="detail-section">
+            <h4>⏳ Typical Project Timeline:</h4>
+            <p>Basic website: 2-3 weeks</p>
+            <p>Full-stack app: 4-6 weeks</p>
+        </div>
+        <div class="detail-section">
+            <h4>🎓 Academic Projects:</h4>
+            <p>Airline Reservation System (Java GUI + MySQL)</p>
+            <p>Portfolio website (React.js)</p>
+        </div>
+        <div class="detail-section">
+            <h4>💵 Student Pricing:</h4>
+            <p>Static website: $50-$100</p>
+            <p>Dynamic web app: $100-$250</p>
+        </div>
+    </div>
+</div>
+                
+                <!-- Service Card 2 -->
+                <div class="service-card">
+    <i class="fa-solid fa-crop-simple"></i>
+    <h2>Code Optimization & Debugging</h2>
+    <p>Efficiency improvements and error resolution for existing Java/Python codebases.</p>
+    <a href="#contact" class="service-link learn-more-btn" data-service="Code Optimization & Debugging">Learn more</a>
+    
+    <div class="service-details" style="display: none;">
+        <div class="detail-section">
+            <h4>🔧 What I Can Fix:</h4>
+            <p>Slow Java/Python algorithms</p>
+            <p>MySQL query bottlenecks</p>
+            <p>Runtime errors & exception handling</p>
+        </div>
+        <div class="detail-section">
+            <h4>🛠️ My Approach:</h4>
+            <p>Code review with comments</p>
+            <p>Performance testing</p>
+            <p>Step-by-step optimization report</p>
+        </div>
+        <div class="detail-section">
+            <h4>📚 Academic Special:</h4>
+            <p>Assignment debugging: $15/hour</p>
+            <p>Project consultation: Free initial assessment</p>
+        </div>
+        <div class="detail-section">
+            <h4>✅ Sample Work:</h4>
+            <p>Optimized maze solver runtime by 40%</p>
+        </div>
+    </div>
+</div>
+                
+                <!-- Service Card 3 -->
+                <div class="service-card">
+    <i class="fa-brands fa-app-store-ios"></i>
+    <h2>Academic Project Development</h2>
+    <p>Java/Python programming for assignments & research, Algorithm implementation, Database design (MySQL)</p>
+    <a href="#contact" class="service-link learn-more-btn" data-service="Academic Project Development">Learn more</a>
+    
+    <div class="service-details" style="display: none;">
+        <div class="detail-section">
+            <h4>🧑‍💻 Services Include:</h4>
+            <p>Complete Java/Python projects</p>
+            <p>Database design (ER diagrams)</p>
+            <p>Documentation (SRS, user manuals)</p>
+        </div>
+        <div class="detail-section">
+            <h4>🎯 Ideal For:</h4>
+            <p>University coursework</p>
+            <p>Final year project prototypes</p>
+            <p>Research paper implementations</p>
+        </div>
+        <div class="detail-section">
+            <h4>⏱️ Turnaround Time:</h4>
+            <p>Small projects: 1-2 weeks</p>
+            <p>Complex systems: 3-4 weeks</p>
+        </div>
+        <div class="detail-section">
+            <h4>📂 Project Portfolio:</h4>
+            <p>[GitHub link] to Airline System code</p>
+        </div>
+    </div>
+</div>
+                <!-- Service Card 4 -->
+                <div class="service-card">
+    <i class="fa-brands fa-app-store-ios"></i>
+    <h2>Technical Documentation</h2>
+    <p>Professional project reports and technical documentation for academic and small-scale software.</p>
+    <a href="#contact" class="service-link learn-more-btn" data-service="Technical Documentation">Learn more</a>
+    
+    <div class="service-details" style="display: none;">
+        <div class="detail-section">
+            <h4>📝 Documentation Types:</h4>
+            <p>Software Requirements Specifications (SRS)</p>
+            <p>API documentation</p>
+            <p>User guides & technical manuals</p>
+        </div>
+        <div class="detail-section">
+            <h4>🔍 Samples Provided:</h4>
+            <p>Airline System SRS document</p>
+            <p>Maze Solver algorithm explanation</p>
+        </div>
+        <div class="detail-section">
+            <h4>✍️ Process:</h4>
+            <p>Requirements interview</p>
+            <p>Draft + revisions</p>
+            <p>Final formatted deliverable</p>
+        </div>
+        <div class="detail-section">
+            <h4>📅 Typical Delivery:</h4>
+            <p>10-page doc: 1 week</p>
+            <p>Urgent requests: +30% fee</p>
+        </div>
+    </div>
+</div>
+                <!-- Service Card 5 -->
+                <div class="service-card hidden-service">
+    <i class="fa-brands fa-app-store-ios"></i>
+    <h2>Video Editing.</h2>
+    <p>Professional Editing for All Needs.</p>
+    <a href="#contact" class="service-link learn-more-btn" data-service="Technical Documentation">Learn more</a>
+    
+    <div class="service-details" style="display: none;">
+        <div class="detail-section">
+            <h4>My Specialties:</h4>
+            <p>Precision Cutting: Seamless scene transitions</p>
+            <p>Color Grading: Cinematic looks</p>
+            <p>Motion Graphics: Basic titles/animations</p>
+        </div>
+        <div class="detail-section">
+            <h4>Tools I Use:</h4>
+            <p>Adobe Premiere Pro</p>
+            <p>CapCut (for quick mobile edits)</p>
+        </div>
+        <div class="detail-section">
+            <h4>Turnaround:</h4>
+            <p>Short clips: 24 hours </p>
+            <p>Long-form (5-10 min): 3-5 days</p>
+        </div>
+        <div class="detail-section">
+            <h4>Pricing:</h4>
+            <p>$15: Instagram Reel (1 revision)</p>
+            <p>$50: YouTube video (3 revisions)</p>
+            <p>$100: Wedding highlight (raw footage provided)</p>
+        </div>
+    </div>
+</div>
+        </div>
+            <a href="#" class="btn">See more</a>
+        </div>
+    </section>
+
+<!-- ======================= -->
+<!-- === PORTFOLIO SECTION === -->
+<!-- ======================= -->
+<section id="portfolio">
+    <div class="container">
+        <h1 class="sub-title">My Projects</h1>
+        <div class="work-list">
+            <!-- Project 1 - Airline System -->
+            <div class="work">
+                <img src="images/Work-1.jpeg" alt="Airline Reservation System" loading="lazy">
+                <div class="layer">
+                    <h3>Airline Reservation System</h3>
+                    <p>Full-stack system developed in multiple technologies</p>
+                    <div class="tech-stack">
+                        <span class="tech-icon">Java</span>
+                        <span class="tech-icon">C++</span>
+                        <span class="tech-icon">MySQL</span>
+                    </div>
+                    <a href="https://github.com/taimoor-stack/Project_Info" class="project-link" aria-label="View Airline System">
+                        <i class="fa-solid fa-up-right-from-square"></i>
+                    </a>
+                </div>
+                <div class="project-details">
+                    <p>Developed 5 versions (Java GUI, C++/DSA, MySQL DB) with CRUD operations. Reduced query latency by 30% through index optimization.</p>
+                </div>
+            </div>
+            
+            <!-- Project 2 - AI Maze Solver -->
+            <div class="work">
+                <img src="images/Work-2.jpg" alt="AI Pathfinding Visualizer" loading="lazy">
+                <div class="layer">
+                    <h3>AI Pathfinding Visualizer</h3>
+                    <p>Maze solving algorithms with visualization</p>
+                    <div class="tech-stack">
+                        <span class="tech-icon">Python</span>
+                        <span class="tech-icon">Prolog</span>
+                        <span class="tech-icon">Pygame</span>
+                    </div>
+                    <a href="https://github.com/taimoor-stack/Project_Info" class="project-link" aria-label="View Maze Solver">
+                        <i class="fa-solid fa-up-right-from-square"></i>
+                    </a>
+                </div>
+                <div class="project-details">
+                    <p>Implemented A* and Dijkstra's algorithms in Python to solve 10x10 mazes, with Prolog-based logic for optimal routing.</p>
+                </div>
+            </div>
+            
+            <!-- Project 3 - SRS Toolkit -->
+            <div class="work">
+                <img src="images/Work-3.jpeg" alt="SRS Documentation Toolkit" loading="lazy">
+                <div class="layer">
+                    <h3>SRS Documentation Toolkit</h3>
+                    <p>Technical documentation framework</p>
+                    <div class="tech-stack">
+                        <span class="tech-icon">Markdown</span>
+                        <span class="tech-icon">UML</span>
+                        <span class="tech-icon">Git</span>
+                    </div>
+                    <a href="https://github.com/taimoor-stack/Project_Info" class="project-link" aria-label="View SRS Toolkit">
+                        <i class="fa-solid fa-up-right-from-square"></i>
+                    </a>
+                </div>
+                <div class="project-details">
+                    <p>Created comprehensive SRS docs with UML diagrams and user stories. Streamlined team workflows with version-controlled templates.</p>
+                </div>
+            </div>
+            
+            <!-- Project 4 - Database Optimizer -->
+            <div class="work">
+                <img src="images/Work-4.jpeg" alt="MySQL Query Optimizer" loading="lazy">
+                <div class="layer">
+                    <h3>MySQL Query Optimizer</h3>
+                    <p>Database performance enhancement</p>
+                    <div class="tech-stack">
+                        <span class="tech-icon">MySQL</span>
+                        <span class="tech-icon">Python</span>
+                    </div>
+                    <a href="https://github.com/taimoor-stack/Project_Info" class="project-link" aria-label="View DB Optimizer">
+                        <i class="fa-solid fa-up-right-from-square"></i>
+                    </a>
+                </div>
+                <div class="project-details">
+                    <p>Designed and indexed a student-grade database, reducing query time by 65% through normalization and composite indexing.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+    <!-- ====================== -->
+    <!-- === CONTACT SECTION === -->
+    <!-- ====================== -->
+    <section id="contact">
+        <div class="container">
+            <div class="row">
+                <!-- Contact Information -->
+                <div class="contact-left">
+                    <h1 class="sub-title">Contact Me</h1>
+                    <p><i class="fa-solid fa-paper-plane"></i> FA23-BSE-059@cuiatk.edu.pk</p>
+                    <p><i class="fa-solid fa-square-phone"></i> 0302-8351874</p>
+                    
+                    <!-- Social Media Links -->
+                    <div class="social-icons">
+                        <a href="https://facebook.com/" aria-label="Facebook Profile"><i class="fa-brands fa-facebook"></i></a>
+                        <a href="https://instagram.com/" aria-label="Instagram Profile"><i class="fa-brands fa-instagram"></i></a>
+                        <a href="https://tiktok.com/" aria-label="TikTok Profile"><i class="fa-brands fa-tiktok"></i></a>
+                        <a href="https://linkedin.com/" aria-label="LinkedIn Profile"><i class="fa-brands fa-linkedin"></i></a>
+                    </div>
+                    
+                    <a href="images/CV.pdf" download class="btn btn2">Download CV</a>
+                </div>
+                
+                <!-- Contact Form -->
+                <div class="contact-right">
+                    <form name="submit-to-google-sheet">
+                        <input type="text" name="Name" placeholder="Your Name" required minlength="3">
+                        <input type="email" name="Email" placeholder="Your Email" required>
+                        <textarea name="Message" rows="6" placeholder="Your Message" required></textarea>
+                        <button type="submit" class="btn btn2">Submit</button>
+                    </form>
+                    <span id="msg"></span>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ==================== -->
+    <!-- === FOOTER SECTION === -->
+    <!-- ==================== -->
+    <footer class="copyright">
+        <div class="container">
+            <p>Copyright &copy; <span id="year"></span> | Made with <i class="fa-solid fa-heart"></i> by Taimoor</p>
+        </div>
+    </footer>
+
+    <!-- ====================== -->
+    <!-- === JAVASCRIPT CODE === -->
+    <!-- ====================== -->
+    <script>
+        // Tab Switching Functionality
+        function opentab(tabname) {
+            const tablinks = document.getElementsByClassName("tab-links");
+            const tabcontents = document.getElementsByClassName("tab-contents");
+            
+            // Remove active class from all tabs
+            for (let tablink of tablinks) {
+                tablink.classList.remove("active-link");
+            }
+            
+            // Hide all tab contents
+            for (let tabcontent of tabcontents) {
+                tabcontent.classList.remove("active-tab");
+            }
+            
+            // Activate clicked tab
+            event.currentTarget.classList.add("active-link");
+            document.getElementById(tabname).classList.add("active-tab");
+        }
+
+        // Mobile Menu Toggle
+        const sidemenu = document.getElementById("sidemenu");
+        
+        function openmenu() {
+            sidemenu.style.right = "0";
+        }
+        
+        function closemenu() {
+            sidemenu.style.right = "-200px";
+        }
+
+        // Contact Form Submission
+        const scriptURL = 'https://script.google.com/macros/s/AKfycbzKatBeax8AS2o27tpmibQgwCX9mj2-01aXY8iWWYY1-1WW3O3DIdAca2OCua4NuiQ/exec';
+        const form = document.forms['submit-to-google-sheet'];
+        const msg = document.getElementById("msg");
+
+        form.addEventListener('submit', e => {
+            e.preventDefault();
+            fetch(scriptURL, { method: 'POST', body: new FormData(form)})
+                .then(response => {
+                    msg.innerHTML = "Message Sent Successfully";
+                    setTimeout(() => msg.innerHTML = "", 5000);
+                    form.reset();
+                })
+                .catch(error => console.error('Error!', error.message));
+        });
+        // Service expansion functionality
+        // Service expansion functionality ("See more" button)
+document.querySelector('#services .btn').addEventListener('click', function(e) {
+    e.preventDefault();
+    
+    // Show all hidden services
+    document.querySelectorAll('.hidden-service').forEach(service => {
+        service.style.display = 'block';
+    });
+    
+    // Hide the "See more" button
+    this.style.display = 'none';
+    
+    // Adjust grid layout if needed
+    document.querySelector('.services-list').style.gridTemplateColumns = 'repeat(auto-fit, minmax(250px, 1fr))';
+});
+
+// Service details expansion functionality ("Learn more" buttons)
+document.querySelectorAll('.learn-more-btn').forEach(btn => {
+    btn.addEventListener('click', function(e) {
+        e.preventDefault();
+        
+        const serviceName = this.getAttribute('data-service');
+        const detailsSection = this.nextElementSibling;
+        
+        // Close any other open details sections first
+        document.querySelectorAll('.service-details').forEach(section => {
+            if (section !== detailsSection && section.style.display === 'block') {
+                section.style.display = 'none';
+                section.previousElementSibling.textContent = 'Learn more';
+            }
+        });
+        
+        // Toggle current details visibility
+        if(detailsSection.style.display === 'none' || !detailsSection.style.display) {
+            detailsSection.style.display = 'block';
+            this.textContent = 'Show less';
+            
+            // Scroll to contact form and pre-fill
+            const contactForm = document.querySelector('#contact [name="Message"]');
+            if (contactForm) {
+                contactForm.value = `Interested in ${serviceName} service. Please provide more details.`;
+                document.getElementById('contact').scrollIntoView({ behavior: 'smooth' });
+            }
+        } else {
+            detailsSection.style.display = 'none';
+            this.textContent = 'Learn more';
+        }
+    });
+});
+document.querySelector('.see-more-btn').addEventListener('click', function(e) {
+    e.preventDefault();
+    
+    // Show all hidden services
+    document.querySelectorAll('.hidden-service').forEach(service => {
+        service.style.display = 'block';
+    });
+    
+    // Hide the "See more" button
+    this.style.display = 'none';
+    
+    // Smooth scroll to maintain context
+    setTimeout(() => {
+        document.querySelector('.hidden-service').scrollIntoView({ 
+            behavior: 'smooth', 
+            block: 'nearest' 
+        });
+    }, 100);
+});
+
+        // Update Copyright Year Automatically
+        document.getElementById('year').textContent = new Date().getFullYear();
+    </script>
+</body>
+</html>
